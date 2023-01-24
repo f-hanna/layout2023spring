@@ -1,11 +1,12 @@
 :root {
     --black: rgb(46, 46, 46);
-  }
+}
 
 body {
     max-width: 360px;
     margin: auto;
     color: var(--black);
+    font-family: inter;
 }
 
 pre {
@@ -18,6 +19,7 @@ pre {
 
 .story-list {
     padding: 0;
+    margin-bottom: 40%;
 }
 
 .story {
@@ -28,13 +30,51 @@ pre {
     padding: 10%;
 }
 
-.story > * {
-    /* padding-bottom: 20%; */
-}
+/* .story > * {
+    
+} */
 
 .story-title {
-    font-size: 20pt;
+    font-size: 18pt;
     color: var(--black);
     text-decoration: none;
-    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    padding: 0 0;
+    line-height: 28px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.story-description {
+    /* font-size: 12pt; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    padding: 0 0;
+    line-height: 20px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.story-img {
+    border-radius: 10px;
+}
+
+.story-content {
+    margin-top: 2%;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 16px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.story-url {
+    margin-top: 10%;
+    font-size: 9pt;
+    text-decoration: none;
 }
