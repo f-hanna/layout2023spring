@@ -1,5 +1,6 @@
 :root {
     --black: rgb(46, 46, 46);
+    --grey: rgb(106, 106, 106);
 }
 
 body {
@@ -35,16 +36,23 @@ pre {
 } */
 
 .story-title {
-    font-size: 18pt;
+    /* font-size: 18pt; */
     color: var(--black);
     text-decoration: none;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    padding: 0 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
     line-height: 28px;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+}
+
+.story-title:hover {
+    /* font-size: 18pt; */
+    color: var(--grey);
+    
 }
 
 .story-description {
@@ -74,7 +82,11 @@ pre {
 }
 
 .story-url {
-    margin-top: 10%;
+    margin-top: 5%;
     font-size: 9pt;
+    text-transform: uppercase;
+}
+
+.url {
     text-decoration: none;
 }
