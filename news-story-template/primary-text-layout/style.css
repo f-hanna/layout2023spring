@@ -1,0 +1,40 @@
+:root {
+    --black: rgb(46, 46, 46);
+  }
+
+body {
+    max-width: 360px;
+    margin: auto;
+    color: var(--black);
+}
+
+pre {
+    display: none;
+}
+
+.featured-story {
+    display: none;
+}
+
+.story-list {
+    padding: 0;
+}
+
+.story {
+    list-style: none;
+    margin-bottom: 10%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.07), 0 6px 20px 0 rgba(0, 0, 0, 0.07);
+    padding: 10%;
+}
+
+.story > * {
+    /* padding-bottom: 20%; */
+}
+
+.story-title {
+    font-size: 20pt;
+    color: var(--black);
+    text-decoration: none;
+    
+}
