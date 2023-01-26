@@ -53,10 +53,12 @@
     <pre>The featured story object: {{ featuredStory | json }}</pre>
 
     <!-- Stories List -->
-    <h1>Other Stories</h1>
-    <ul class="story-list">
-      <!-- This 'loop' generates a list item for each story in the 'stories' array. -->
-      <li class="story" v-for="story in stories">
+    <div class="other-wrapper">
+
+      <h1>Other Stories</h1>
+      <ul class="story-list">
+        <!-- This 'loop' generates a list item for each story in the 'stories' array. -->
+        <li class="story" v-for="story in stories">
 
           <article>
 
@@ -74,26 +76,36 @@
             <p class="story-description">{{ story.description }}</p>
 
             <!-- Story image -->
-            <img class="story-img" v-bind:src="story.image">
 
-            <!-- Story content (truncated) -->
-            <div class="story-content">
-              <span v-html="story.content"></span>
+            <div class="flex-content">
+
+              <img class="story-img" v-bind:src="story.image">
+
+              <!-- Story content (truncated) -->
+              <div class="story-content">
+                <span v-html="story.content"></span>
+              </div>
+
             </div>
+
 
             <!-- Story source (linked) -->
             <p class="story-url">
-              Published by 
+              Published by
               <a class="url" v-bind:href="story.source.url">{{ story.source.name }}</a>
             </p>
-            
+
 
           </article>
 
-        </a>
+          </a>
 
-      </li>
-    </ul>
+        </li>
+      </ul>
+
+    </div>
+
+
 
     <!-- Debugging info, you can comment this section out when you don't need it. -->
     <pre>The stories array: {{ stories | json }}</pre>
