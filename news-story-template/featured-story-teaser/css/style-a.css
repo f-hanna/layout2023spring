@@ -163,6 +163,10 @@ pre {
         margin: auto;
     }
 
+    .featured-story {
+        margin-bottom: 10%;
+    }
+
     .story-list {
         /* margin-left: 10%;
         margin-right: 10%; */
