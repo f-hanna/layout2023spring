@@ -138,7 +138,7 @@ pre {
     text-overflow: ellipsis;
     display: -webkit-box;
     line-height: 24px;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
 
