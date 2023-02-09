@@ -10,6 +10,22 @@
             padding: 0;
         }
 
+        li {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .card-title, .url {
+            text-decoration: none;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 20vw;
+            object-fit: cover;
+        }
+
         [v-cloak] {
             display: none;
         }
@@ -81,16 +97,19 @@
             <ul class="row ps-0">
                 <!-- This 'loop' generates a list item for each story in the 'stories' array. -->
     
-                <li class="col-lg-4 col-sm-6 card" v-for="story in stories">
+                <li class="col-lg-4 col-md-6 col-sm-12 mt-3" v-for="story in stories">
     
-                    <article>
+                    <article class="card p-3 h-100">
     
                         <!-- Story date -->
-                        <sub class="story-date">{{ story.date }}</sub>
+                        <sub class="pb-4">{{ story.date }}</sub>
+
+                         <!-- Story image -->
+                         <img class="rounded card-img" v-bind:src="story.image">
     
                         <!-- Story title (linked) -->
                         <h2>
-                            <a class="story-title" v-bind:href="story.url">{{ story.title }}</a>
+                            <a class="card-title" v-bind:href="story.url">{{ story.title }}</a>
     
                         </h2>
     
@@ -98,11 +117,8 @@
                         <!-- Story description -->
                         <p class="story-description">{{ story.description }}</p>
     
-                        <!-- Story image -->
-                        <img class="rounded" v-bind:src="story.image">
-    
                         <!-- Story content (truncated) -->
-                        <div class="story-content">
+                        <div class="d-none">
                             <span v-html="story.content"></span>
                         </div>
     
