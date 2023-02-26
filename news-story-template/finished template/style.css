@@ -59,6 +59,8 @@ body {
     max-height: 0;
     transition: max-height .2s ease-out;
   }
+
+
   
   /* menu icon */
   
@@ -133,7 +135,7 @@ body {
   
   /* 48em = 768px */
   
-  @media (min-width: 1160px) {
+  @media (min-width: 1199px) {
     .header li {
       float: left;
     }
