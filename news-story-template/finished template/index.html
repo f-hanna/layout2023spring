@@ -13,10 +13,16 @@
       max-width: 100%;
     }
   </style>
+  <!-- STYLE SHEETS -->
   <link rel="stylesheet" href="body-css.css">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Inter:wght@400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
     rel="stylesheet">
@@ -24,41 +30,45 @@
 
 <body>
 
-    <header class="header">
-        <div class="logo-nav">
+  <header class="header">
+    <div class="logo-nav">
 
-            <a href="" class="logo">
-                <img class="logo-img" src="Logo.png" alt="logo img">
-            </a>
-            <input class="menu-btn" type="checkbox" id="menu-btn" />
-            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-            <ul class="menu">
-              <li><a href="#">World</a></li>
-              <li><a href="#">Politics</a></li>
-              <li><a href="#">Business</a></li>
-              <li><a href="#">Tech</a></li>
-              <li><a href="#">Science</a></li>
-              <li><a href="#">Sports</a></li>
-            </ul>
+      <a href="" class="logo">
+        <img class="logo-img" src="Logo.png" alt="logo img">
+      </a>
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+      <ul class="menu">
+        <li><a href="#">World</a></li>
+        <li><a href="#">Politics</a></li>
+        <li><a href="#">Business</a></li>
+        <li><a href="#">Tech</a></li>
+        <li><a href="#">Science</a></li>
+        <li><a href="#">Sports</a></li>
+      </ul>
 
-        </div>
-       
-      </header>
+    </div>
+
+  </header>
 
   <div id="news-stories-list-template" v-cloak>
 
     <!-- The Featured Story -->
-    <h1>Featured Story</h1>
+    <!-- <h1>Featured Story</h1> -->
     <div class="featured-story">
 
-
-
-
-      <div class="featured-story-flex">
-
+      <div class="featured-story-flex-left">
         <sub class="story-date">
           {{ featuredStory.date }}
         </sub>
+
+        <img class="story-featured-img" v-bind:src="featuredStory.image">
+
+      </div>
+
+
+
+      <div class="featured-story-flex-right">
 
         <!-- Story title (linked) -->
         <h1>
@@ -82,7 +92,6 @@
 
 
       </div>
-      <img class="story-featured-img" v-bind:src="featuredStory.image">
       <!-- Story source (linked) -->
 
 
@@ -92,7 +101,7 @@
     <pre>The featured story object: {{ featuredStory | json }}</pre>
 
     <!-- Stories List -->
-    <h1>Other Stories</h1>
+    <!-- <h1>Other Stories</h1> -->
     <ul class="story-list">
       <!-- This 'loop' generates a list item for each story in the 'stories' array. -->
 
@@ -103,8 +112,8 @@
           <!-- Story date -->
           <sub class="story-date">{{ story.date }}</sub>
 
-           <!-- Story image -->
-           <img class="story-img" v-bind:src="story.image">
+          <!-- Story image -->
+          <img class="story-img" v-bind:src="story.image">
 
           <!-- Story title (linked) -->
           <h2>
@@ -113,8 +122,8 @@
           </h2>
 
 
-          
-         
+
+
 
           <!-- Story description -->
           <p class="story-description">{{ story.description }}</p>
