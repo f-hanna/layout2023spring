@@ -1,0 +1,74 @@
+html {
+    background: url(../images/bg-no-effects.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+}
+
+/* #battle-side {
+    position: relative;
+  } */
+
+
+#whole-container,
+#battle-side {
+    display: flex;
+}
+
+
+
+/* BATTLE LOGISTICS SECTION */
+
+#boss,
+#player {
+    position: fixed;
+    bottom: 0;
+    height: 80%;
+    width: 50%;
+}
+
+#player {
+    /* position: absolute; */
+    left: 50%;
+    margin-left: 10%;
+}
+
+/* BATTLE SIDE */
+
+#boss-img {
+    height: 80%;
+}
+
+/* PLAYER SIDE */
+#player-wrapper {
+    /* margin-top: 60%;
+    margin-left: 10%; */
+    position: inherit;
+    height: 40%;
+    /* width: 100%; */
+    bottom: 0;
+}
+
+#player-img {
+    margin-top: 5%;
+    height: 50%;
+}
+
+.player-info {
+    float: right;
+    /* width: 60%; */
+}
+
+.player-options {
+    background-color: rgba(0, 0, 0, 0.427);
+    background-blend-mode: multiply;
+    padding-right: 200px;
+    padding-left: 9px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    outline: 1px solid rgba(255, 255, 255, 0.489);
+    border-radius: 5px;
+}
