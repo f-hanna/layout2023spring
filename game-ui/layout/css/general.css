@@ -8,13 +8,17 @@ html {
     font-family: 'PT Sans', sans-serif;
 }
 
+body {
+    margin: 0;
+}
+
 /* #battle-side {
     position: relative;
   } */
 
-  /* FILTER? */
+/* FILTER? */
 
-  /* .filter-layer {
+/* .filter-layer {
     z-index: 1000;
     width: 100%;
     height: 100%;
@@ -25,12 +29,16 @@ html {
 #whole-container,
 #battle-side {
     display: flex;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 
 
 /* BATTLE LOGISTICS SECTION */
+
+#battle-side {
+    width: 80%;
+}
 
 #boss,
 #player {
@@ -81,4 +89,81 @@ html {
     padding-bottom: 3px;
     outline: 1px solid rgba(255, 255, 255, 0.489);
     border-radius: 5px;
+}
+
+/* INFO SECTION */
+#info-side {
+    width: 20%;
+    display: inline-block;
+}
+
+.character {
+    width: 70%;
+    background: linear-gradient(to right, #00000000 0%, #00000075 75%);
+    backdrop-filter: blur(5px);
+    padding: 3%;
+
+}
+
+
+.character-bg {
+    width: 70%;
+    margin-left: auto;
+    background: linear-gradient(to right, #00000000 0%, #00000034 75%);
+    backdrop-filter: blur(5px);
+    padding: 3%;
+
+}
+
+.character > *, .character-bg  > * {
+    margin-block-start: 2px;
+    margin-block-end: 2px;
+
+}
+
+.character-hr {
+    border-top: .5px solid rgba(255, 255, 255, 0.629);
+    
+}
+
+.hp-points, .sp-points {
+    font-size: 12px;
+}
+
+.hp, .sp {
+    box-sizing: content-box;
+    height: 5px;
+    /* Can be anything */
+    position: relative;
+    border-radius: 10px;
+    /* padding: 10px; */
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.hp> span {
+    border-radius: 10px;
+    display: block;
+    height: 100%;
+    background-color: rgb(43, 194, 83);
+    background-image: linear-gradient(center bottom,
+            rgb(43, 194, 83) 37%,
+            rgb(84, 240, 84) 69%);
+    box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.744),
+        inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.sp>span {
+    border-radius: 10px;
+    display: block;
+    height: 100%;
+    background-color: rgb(43, 131, 194);
+    background-image: linear-gradient(center bottom,
+            rgb(43, 131, 194) 37%,
+            rgb(70, 153, 212) 69%);
+    box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.744),
+        inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
 }
