@@ -1,5 +1,5 @@
 html {
-    background: url(../images/bg-no-effects.png) no-repeat center center fixed;
+    background: url(../images/bg-effects.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -12,10 +12,20 @@ html {
     position: relative;
   } */
 
+  /* FILTER? */
+
+  /* .filter-layer {
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#e66465, #9198e5, 0.5);
+  } */
+
 
 #whole-container,
 #battle-side {
     display: flex;
+    z-index: 2;
 }
 
 
