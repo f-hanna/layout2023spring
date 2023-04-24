@@ -18,6 +18,9 @@
 </head>
 
 <body>
+    <audio controls autoplay loop id="audio-btn">
+        <source src="Battle1.mp3" type="audio/mpeg">
+    </audio>
 
     <div id="whole-container">
         <!-- <div class="filter-layer">
@@ -44,7 +47,7 @@
                 <div id="player-wrapper">
 
                     <img id="player-img" src="images/primrose.png" alt="primrose">
-                    
+
                     <div class="player-info">
 
                         <div class="player-options" id="atk-option" onclick="skillDetail(this)">
@@ -53,7 +56,7 @@
                         <div class="player-options" id="skill-option" onclick="skillDetail(this)">
                             Dancer Skills
                         </div>
-                        <div class="player-options" onclick="skillDetail(this)" >
+                        <div class="player-options" onclick="skillDetail(this)">
                             Item
                         </div>
                         <div class="player-options" onclick="skillDetail(this)">
@@ -66,11 +69,11 @@
                     </div>
                     <div id="player-info-detail">
 
-                       
-                       
+
+
 
                     </div>
-                  
+
 
 
                 </div>
@@ -88,7 +91,7 @@
                 <hr class="character-hr">
                 <p class="hp-points">HP 812/910</p>
                 <div class="hp" id="">
-                    <span></span>
+                    <span id="ophelia-hp"></span>
                 </div>
 
                 <p class="sp-points">SP 45/92</p>
@@ -98,13 +101,13 @@
 
             </div>
 
-            <div class="character">
+            <div class="character" onclick="primroseBar(this)">
 
                 <p>Primrose</p>
                 <hr class="character-hr">
-                <p class="hp-points">HP 812/910</p>
+                <p class="hp-points">HP 490/561</p>
                 <div class="hp">
-                    <span style="width: 90%"></span>
+                    <span id="primrose-hp"></span>
                 </div>
 
                 <p class="sp-points">SP 45/92</p>
@@ -119,7 +122,7 @@
 
     </div>
 
-   
+
 
 
 </body>

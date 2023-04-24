@@ -88,7 +88,7 @@ body {
 #player-info-detail {
     float: right;
     display: none;
-    
+
     /* width: 60%; */
 }
 
@@ -127,7 +127,8 @@ body {
 
 }
 
-.character > *, .character-bg  > * {
+.character>*,
+.character-bg>* {
     margin-block-start: 2px;
     margin-block-end: 2px;
 
@@ -135,14 +136,16 @@ body {
 
 .character-hr {
     border-top: .5px solid rgba(255, 255, 255, 0.629);
-    
+
 }
 
-.hp-points, .sp-points {
+.hp-points,
+.sp-points {
     font-size: 12px;
 }
 
-.hp, .sp {
+.hp,
+.sp {
     box-sizing: content-box;
     height: 5px;
     /* Can be anything */
@@ -152,19 +155,55 @@ body {
     box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
 }
 
-.hp> span {
+.hp>span {
     border-radius: 10px;
     display: block;
     height: 100%;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    /* background-color: green; */
+    transition: transform 0.5s, background-color 0.5s;
+    transform-origin: 0 0;
+
+}
+
+#primrose-hp {
+
+    background-color: rgb(43, 194, 83);
+    /* background-image: linear-gradient(center bottom,
+            rgb(43, 194, 83) 37%,
+            rgb(84, 240, 84) 69%); */
+    box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.744),
+        inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+
+    width: 90%;
+
+}
+
+.hp.high span{
+    transform: scaleX(0.9);
+    background-color: green;
+}
+
+.low {
+    transform: scaleX(0.1);
+    background-color: red;
+    box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.744),
+        inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+}
+
+#ophelia-hp {
+
     background-color: rgb(43, 194, 83);
     background-image: linear-gradient(center bottom,
             rgb(43, 194, 83) 37%,
             rgb(84, 240, 84) 69%);
     box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.744),
         inset 0 -2px 6px rgba(0, 0, 0, 0.4);
-    position: relative;
-    overflow: hidden;
-    width: 90%
+
+    width: 70%;
+
 }
 
 .sp>span {
@@ -188,4 +227,11 @@ body {
     padding-top: 5px;
     padding-bottom: 5px;
     outline: 1px solid rgba(255, 255, 255, 0.675);
-  }
+}
+
+#audio-btn {
+    padding-top: 10px;
+    z-index: 289;
+    text-align: right;
+    opacity: 20%;
+}

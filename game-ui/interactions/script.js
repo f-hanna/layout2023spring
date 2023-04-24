@@ -2,6 +2,8 @@
 const atkMoves = ["Use Dagger", "Use Sword"];
 const skillMoves = ["Lion Dance", "Moonlight Waltz", "Peacock Strut", "Mole Dance", "Night Ode", "Panther Dance", "Bewildering Grace", "Sealticge's Seduction"];
 
+
+
 function skillDetail(e) {
 
     var parentDiv = document.getElementById("player-info-detail")
@@ -43,4 +45,13 @@ function skillDetail(e) {
 
 
 
+}
+
+function primroseBar(e) {
+   // alert("touched prim")
+
+    document
+        .getElementById('primrose-hp')
+        .classList
+        .toggle('low')
 }
