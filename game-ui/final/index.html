@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=PT+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <audio controls autoplay loop id="audio-btn">
+        <source src="Battle1.mp3" type="audio/mpeg">
+    </audio>
+
+    <img id="background" src="images/bg-with-people.png" alt="">
+
+
+    <div id="whole-container">
+        <!-- <div class="filter-layer">
+
+        </div> -->
+
+
+
+        <div id="battle-side">
+
+            <div id="boss">
+
+                <img id="boss-img" src="images/boss.png" alt="boss">
+                <div id="boss-info">
+
+                    <p id="vulnerable-text">VULNERABLE</p>
+                    <img src="images/shield-vulnerable.png" alt="boss description">
+
+
+
+                </div>
+
+            </div>
+
+            <div id="player">
+
+                <div id="player-wrapper">
+
+                    <img id="player-img" src="images/primrose.png" alt="primrose">
+
+                    <div class="player-info">
+
+                        <div class="player-options" id="atk-option" onclick="skillDetail(this)">
+                            Attack
+                        </div>
+                        <div class="player-options" id="skill-option" onclick="skillDetail(this)">
+                            Dancer Skills
+                        </div>
+                        <div class="player-options" onclick="skillDetail(this)">
+                            Item
+                        </div>
+                        <div class="player-options" onclick="skillDetail(this)">
+                            Defend
+                        </div>
+                        <div class="player-options" onclick="skillDetail(this)">
+                            Flee
+                        </div>
+
+                       
+
+                    </div>
+                    <div id="player-info-detail">
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div id="info-side">
+
+            <div class="character character-bg" id="ophelia-bar" onclick="opheliaPress(this)">
+
+                <p>Ophelia</p>
+                <hr class="character-hr">
+                <p class="hp-points">HP 812/910</p>
+                <div class="hp" id="">
+                    <span id="ophelia-hp"></span>
+                </div>
+
+                <p class="sp-points">SP 45/92</p>
+                <div class="sp">
+                    <span style="width: 48%"></span>
+                </div>
+
+            </div>
+
+            <div class="character" id="primrose-bar" onclick="primroseBar(this)">
+
+                <p>Primrose</p>
+                <hr class="character-hr">
+                <p class="hp-points">HP 490/561</p>
+                <div class="hp">
+                    <span id="primrose-hp"></span>
+                </div>
+
+                <p class="sp-points">SP 45/92</p>
+                <div class="sp">
+                    <span style="width: 48%"></span>
+                </div>
+
+            </div>
+
+            <div class="character-bg">
+
+                <p>Theroin</p>
+                <hr class="character-hr">
+                <p class="hp-points">HP 812/910</p>
+                <div class="hp" id="">
+                    <span id="ophelia-hp"></span>
+                </div>
+
+                <p class="sp-points">SP 45/92</p>
+                <div class="sp">
+                    <span style="width: 48%"></span>
+                </div>
+
+            </div>
+
+            <div class="character-bg">
+
+                <p>Cyrus</p>
+                <hr class="character-hr">
+                <p class="hp-points">HP 812/910</p>
+                <div class="hp" id="">
+                    <span id="ophelia-hp"></span>
+                </div>
+
+                <p class="sp-points">SP 45/92</p>
+                <div class="sp">
+                    <span style="width: 48%"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
