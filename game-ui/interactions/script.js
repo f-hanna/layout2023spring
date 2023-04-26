@@ -1,6 +1,6 @@
 
-const atkMoves = ["Use Dagger", "Use Sword"];
-const skillMoves = ["Lion Dance", "Moonlight Waltz", "Peacock Strut", "Mole Dance", "Night Ode", "Panther Dance", "Bewildering Grace", "Sealticge's Seduction"];
+const atkMoves = ["Use Dagger" +  '<img class="small-icon" src="images/dagger-icon.png" alt="dagger"></img>' , "Use Sword" +  '<img class="small-icon" src="images/sword-icon.png" alt="dagger"></img>'];
+const skillMoves = ["Lion Dance SP: 4", "Moonlight Waltz SP: 7", "Peacock Strut SP: 4", "Mole Dance SP: 4", "Night Ode SP: 10", "Panther Dance SP: 4", "Bewildering Grace SP: 25", "Sealticge's Seduction SP: 30"];
 
 
 
@@ -9,6 +9,7 @@ function skillDetail(e) {
     var parentDiv = document.getElementById("player-info-detail")
     var parentWrapper = parentDiv.parentNode;
     e = e || window.event;
+    
 
 
     if (parentDiv.style.display === "none") {

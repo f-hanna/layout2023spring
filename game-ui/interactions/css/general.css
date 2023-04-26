@@ -1,5 +1,5 @@
 html {
-    background: url(../images/bg-effects.png) no-repeat center center fixed;
+    background: url(../images/bg-with-people.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -60,6 +60,19 @@ body {
     height: 80%;
 }
 
+#boss-info {
+    position: static;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+#vulnerable-text {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-weight: 900;
+}
+
 /* PLAYER SIDE */
 #player-wrapper {
     /* margin-top: 60%;
@@ -95,12 +108,18 @@ body {
 .player-options {
     background-color: rgba(0, 0, 0, 0.427);
     background-blend-mode: multiply;
-    padding-right: 100px;
+    padding-right: 50px;
     padding-left: 9px;
     padding-top: 3px;
     padding-bottom: 3px;
     outline: 1px solid rgba(255, 255, 255, 0.489);
     border-radius: 5px;
+    
+}
+
+.small-icon {
+    width: 20px;
+    height: auto;
 }
 
 /* INFO SECTION */
@@ -181,10 +200,6 @@ body {
 
 }
 
-.hp.high span{
-    transform: scaleX(0.9);
-    background-color: green;
-}
 
 .low {
     transform: scaleX(0.1);
@@ -234,4 +249,5 @@ body {
     z-index: 289;
     text-align: right;
     opacity: 20%;
+    display: none;
 }
