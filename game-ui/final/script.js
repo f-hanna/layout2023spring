@@ -106,7 +106,7 @@ function updatePoints() {
     if (points == 0) {
         $('#shield-img h3').css('visibility', 'hidden');
         $('#shield-img').css('visibility', 'hidden');
-        $('#boss-img').css('filter', 'grayscale(70%)');
+        $('#boss-img').css('filter', 'grayscale(100%)');
     }
 
 
