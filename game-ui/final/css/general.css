@@ -50,7 +50,7 @@ body {
     bottom: 0;
     left: 0;
     /* height: 80%; */
-    /* padding-bottom: 0; */
+    padding-bottom: 5%;
 }
 
 #boss,
@@ -74,9 +74,57 @@ body {
 
 /* BATTLE SIDE */
 
+#turn-order {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 3%;
+}
+
+.turn-icon {
+    width: 60px;
+    height: 60px;
+}
+
+#turn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#turn-wrapper img:first-child {
+    width: 100px;
+    height: 100px;
+}
+
 #boss-img {
     width: 100%;
 
+}
+
+#shield-img {
+    background-image: url(../images/empty-shield.png);
+    background-repeat: no-repeat;
+    align-items: center;
+    width: 84px;
+    height: 84px;
+}
+
+#shield-counter {
+    margin-top: 30px;
+}
+
+#icon-group {
+    height: 40px;
+}
+
+#boss-desc {
+    display: flex;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 #boss-info {
@@ -108,14 +156,12 @@ body {
 
 }
 
-.player-info {
-    /* float: right; */
-    /* width: 60%; */
-}
 
 #player-info-detail {
     /* float: right; */
     display: none;
+    justify-content: center;
+    align-items: center;
 
     /* width: 60%; */
 }
@@ -123,14 +169,37 @@ body {
 .player-options {
     background-color: rgba(0, 0, 0, 0.427);
     background-blend-mode: multiply;
-    padding-right: 50px;
+    padding-right: 75px;
     padding-left: 9px;
     padding-top: 3px;
     padding-bottom: 3px;
     outline: 1px solid rgba(255, 255, 255, 0.489);
     border-radius: 5px;
+    position:relative
     
-    
+}
+
+.player-options:hover {
+    background-color: rgba(0, 0, 0, 0.774);
+    background-blend-mode: multiply;
+    font-size: larger;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    outline: 1px solid rgba(255, 255, 255, 0.675);
+}
+
+.player-options:hover:after {
+    content: attr(data-hover);
+    padding: 4px 8px;
+    color: black;
+    background-color:white;
+    position: absolute;
+    left: 0; 
+    top: 100%;
+    z-index:10;
+    border:1px black solid;
+    box-shadow:0 0 3px #ccc;
+    font-size: 10px;
 }
 
 .small-icon {
@@ -261,14 +330,7 @@ body {
     overflow: hidden;
 }
 
-.player-options:hover {
-    background-color: rgba(0, 0, 0, 0.774);
-    background-blend-mode: multiply;
-    font-size: larger;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    outline: 1px solid rgba(255, 255, 255, 0.675);
-}
+
 
 #audio-btn {
     padding-top: 10px;

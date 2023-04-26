@@ -26,13 +26,24 @@
 
 
     <div id="whole-container">
-        <!-- <div class="filter-layer">
-
-        </div> -->
+        
 
 
 
         <div id="battle-side">
+
+            <div id="turn-order" onclick="nextTurn()">
+
+                <div id="turn-wrapper">
+                    <img class="primary-turn turn-icon" src="images/turn-primrose.png" alt="">
+                    <img class="turn-icon" src="images/turn-boss.png" alt="">
+                    <img class="turn-icon" src="images/turn-ophelia.png" alt="">
+                    <img class="turn-icon" src="images/turn-cyrus.png" alt="">
+                    <img class="turn-icon" src="images/turn-therion.png" alt="">
+                    
+                </div>
+
+            </div>
 
             <div id="boss">
 
@@ -40,7 +51,17 @@
                 <div id="boss-info">
 
                     <p id="vulnerable-text">VULNERABLE</p>
-                    <img src="images/shield-vulnerable.png" alt="boss description">
+                    <div id="boss-desc">
+                        <div id="shield-img">
+                            <h3 id="shield-counter">5</h3>
+
+                        </div>
+
+                        <img id="icon-group" src="images/icon group.png" alt="">
+
+
+                    </div>
+                    <!-- <img src="images/shield-vulnerable.png" alt="boss description"> -->
 
 
 
@@ -56,23 +77,23 @@
 
                     <div class="player-info">
 
-                        <div class="player-options" id="atk-option" onclick="skillDetail(this)">
+                        <div class="player-options" id="atk-option" onclick="skillDetail(this)" data-hover="Actions that do not cost SP">
                             Attack
                         </div>
-                        <div class="player-options" id="skill-option" onclick="skillDetail(this)">
+                        <div class="player-options" id="skill-option" onclick="skillDetail(this)" data-hover="Actions that cost SP">
                             Dancer Skills
                         </div>
-                        <div class="player-options" onclick="skillDetail(this)">
-                            Item
+                        <div class="player-options" onclick="skillDetail(this)" data-hover="Access your inventory">
+                            Items
                         </div>
-                        <div class="player-options" onclick="skillDetail(this)">
+                        <div class="player-options" onclick="skillDetail(this)" data-hover="Skip your turn to defend">
                             Defend
                         </div>
-                        <div class="player-options" onclick="skillDetail(this)">
+                        <div class="player-options" onclick="skillDetail(this)" data-hover="Run away">
                             Flee
                         </div>
 
-                       
+
 
                     </div>
                     <div id="player-info-detail">
